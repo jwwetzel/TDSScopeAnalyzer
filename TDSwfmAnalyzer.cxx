@@ -613,7 +613,7 @@ void Analyze(int numberOfKeys, int numberOfWaveformsToPlot, double triggerLevel)
         
         for (unsigned int amp = 0; amp != amplitude->size(); ++amp)
         {
-          if (abs(amplitude->at(amp)) > triggerLevel && timeSlice->at(amp) > 0 && timeSlice->at(amp) < 200)
+          if (std::abs(amplitude->at(amp)) > triggerLevel && timeSlice->at(amp) > 0 && timeSlice->at(amp) < 200)
           {
             triggerLevelReached = 1;
           }
